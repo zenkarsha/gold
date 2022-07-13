@@ -1,0 +1,29 @@
+#app {
+  h1 {
+    display: none;
+  }
+  h2 {
+    display: none;
+  }
+  .btn {
+    font-weight: bold;
+  }
+
+  @include at-breakpoint($pad) {
+
+  }
+  @include at-breakpoint($pad-plus) {
+    h1 {
+      font-size:1px;
+      text-indent:-9999px;
+      height: 80px;
+      background: url(../images/h1.png) center no-repeat;
+      background-size: contain;
+      margin:20px auto;
+      display: block;
+    }
+  }
+  @include at-breakpoint($desktop) {
+
+  }
+}

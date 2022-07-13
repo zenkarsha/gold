@@ -1,0 +1,127 @@
+<?php
+
+class generate extends View
+{
+  function __construct($url)
+  {
+    parent::__construct();
+
+    $this->text = $_POST['text'];
+    $this->type = intval($_POST['type']);
+    $this->createImage();
+  }
+  private function createImage()
+  {
+    // setting
+    $font = __DIR__ . '/../../font/jellyfish20140617.ttf';
+
+    // handle text
+    $this->text = preg_replace("/[^\x{4e00}-\x{9fa5}]+$/u", "", $this->text);
+    $this->text = preg_replace("/[\x{fe30}-\x{ffa0}]/u", "", $this->text);
+    if($this->text == null || $this->text == '') $this->text = $this->config['app']['default-text'];
+    $fontsize = $this->setFontsize($this->text);
+    $text = $this->verticalText($this->text);
+
+    // dimension
+    $dimension = textDimensions($text,$font,$fontsize);
+    $width = $dimension[0];
+    $height = $dimension[1];
+
+    // create empty image
+    $this->image = imagecreatefrompng('images/basemap.png');
+    $background = imagecolorallocate($this->image, 0, 0, 0);
+    imagecolortransparent($this->image, $background);
+    // imagealphablending($this->image, false);
+    imagesavealpha($this->image, true);
+
+    // color
+    $color = imagecolorallocate($this->image, 253, 211, 0);
+
+    // draw
+    $x = (382 - $width)/2 - 2;
+    $y = (600 - $height)/2 + $fontsize;
+    imagettftextbold($this->image, $fontsize, 0, $x, $y, $color, $font, $text);
+
+    $this->handleImage();
+  }
+  private function stringForSave($text)
+  {
+    $lines = explode("\n", $text);
+    for($i=0;$i<count($lines);$i++) {
+      @$string .= trim($lines[$i]);
+      if($i !== count($lines) - 1) $string .= ' / ';
+    }
+    return $string;
+  }
+  private function verticalText($text)
+  {
+    $string = "";
+    $array = utf8_str_split($text);
+    for($i = 0; $i < count($array); $i++)
+    {
+      $string .= $array[$i];
+      if($i != count($array) - 1) $string .= '
+';
+    }
+    return $string;
+  }
+  private function setFontsize($text)
+  {
+    $array = utf8_str_split($text);
+    switch (count($array)) {
+      case 5:
+        $fontsize = 40;
+        break;
+
+      case 6:
+        $fontsize = 35;
+        break;
+
+      case 4:
+      default:
+        $fontsize = 47;
+        break;
+    }
+    return $fontsize;
+  }
+  private function handleImage()
+  {
+    switch ($this->type)
+    {
+      // preview
+      case 1:
+        ob_start();
+        imagepng($this->image,null,9,null);
+        $this->image = ob_get_contents();
+        ob_end_clean();
+        @imagedestroy($this->image);
+        print json_encode(['preview'=>'<div><img src="data:image/png;base64,'.base64_encode($this->image).'" /></div>']);
+        break;
+
+      // showroom
+      case 2:
+        if($this->config['init']['enable-showroom'])
+        {
+          $url = base62(strrev(time())).randString(2);
+          $save = './'.$this->config['showroom']['imgfolder'].'/'.$url.'.png';
+          imagepng($this->image,$save,9,null);
+          $content = ['text' => $this->text];
+          $content = json_encode($content);
+          $this->handle('insertShowroomItem',$url,addslashes($content),userIP(),userDevice(),time());
+          headerTo($url);
+          break;
+        }
+
+      //download
+      case 3:
+      default:
+        header('Content-Type: image/png');
+        header("Content-Transfer-Encoding: binary");
+        header('Content-Description: File Transfer');
+        header('Content-Disposition: attachment; filename='.$this->config['app']['filename'].'.png');
+        imagepng($this->image, null, 9, null);
+        @imagedestroy($this->image);
+        break;
+    }
+  }
+}

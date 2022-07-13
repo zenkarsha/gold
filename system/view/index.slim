@@ -1,0 +1,30 @@
+---
+$path
+$title
+$description
+$button
+$fanpage
+$position-button
+---
+
+form#appform.form-horizontal role="form" action="generate" method="post"
+  input#type type="hidden" value="" name="type"
+  #app.row
+    .col-md-6.col-md-offset-1.preview
+      .preview-img
+        div
+      .loading
+        .spinner
+          .double-bounce1
+          .double-bounce2
+    .col-md-4.tools
+      h1 {{$title}}
+      h2 {{$description}}
+      .form-group
+        label 請輸入金牌名稱（最多6字）
+        input#text.form-control name="text" type="text" placeholder="請輸入文字" maxlength="6"
+      hr
+      .row {{$button}}
+  .row
+    .col-sm-12
+      .left-bottom-corner {{$fanpage}}

@@ -1,0 +1,631 @@
+/* line 1, ../sass/core/_global.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 4, ../sass/core/_global.scss */
+body {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: #f0f1e3;
+  background-image: url(../images/background.jpg);
+  color: #666666;
+  font-size: 16px;
+  line-height: 24px;
+  overflow-x: hidden;
+}
+
+/* line 15, ../sass/core/_global.scss */
+a {
+  color: #a30612;
+  text-decoration: none;
+}
+/* line 24, ../../../../../../../Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:hover {
+  color: #a30612;
+}
+/* line 4, ../../../../../../../Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 19, ../sass/core/_global.scss */
+hr {
+  border-top: 1px solid #cfcfcf;
+}
+
+/* line 1, ../sass/core/_layout.scss */
+html {
+  height: 100%;
+}
+
+/* line 4, ../sass/core/_layout.scss */
+body {
+  min-height: 100%;
+}
+
+/* line 7, ../sass/core/_layout.scss */
+#page {
+  position: relative;
+  min-height: 100%;
+}
+/* line 11, ../sass/core/_layout.scss */
+#page #content {
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+/* line 15, ../sass/core/_layout.scss */
+#page #footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 60px 0;
+}
+
+/* line 2, ../sass/partial/_app.scss */
+#app h1 {
+  display: none;
+}
+/* line 5, ../sass/partial/_app.scss */
+#app h2 {
+  display: none;
+}
+/* line 8, ../sass/partial/_app.scss */
+#app .btn {
+  font-weight: bold;
+}
+@media (min-width: 992px) {
+  /* line 16, ../sass/partial/_app.scss */
+  #app h1 {
+    font-size: 1px;
+    text-indent: -9999px;
+    height: 80px;
+    background: url(../images/h1.png) center no-repeat;
+    background-size: contain;
+    margin: 20px auto;
+    display: block;
+  }
+}
+/* line 16, ../sass/partial/_app.scss */
+.lte-ie9 #app h1 {
+  font-size: 1px;
+  text-indent: -9999px;
+  height: 80px;
+  background: url(../images/h1.png) center no-repeat;
+  background-size: contain;
+  margin: 20px auto;
+  display: block;
+}
+
+/* line 1, ../sass/partial/_button.scss */
+.btn {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* line 6, ../sass/partial/_button.scss */
+.btn-default {
+  color: #fff;
+  background-color: #a30612;
+  border-color: #72040d;
+}
+/* line 14, ../sass/partial/_button.scss */
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
+  color: #fff;
+  background-color: #d40817;
+  border-color: #a30612;
+}
+
+/* line 1, ../sass/partial/_corner.scss */
+.left-bottom-corner {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
+/* line 6, ../sass/partial/_corner.scss */
+.left-bottom-corner div {
+  margin: 0 auto;
+}
+
+/* line 1, ../sass/partial/_dragon.scss */
+.dragon-left {
+  display: none;
+}
+@media (min-width: 768px) {
+  /* line 1, ../sass/partial/_dragon.scss */
+  .dragon-left {
+    position: fixed;
+    z-index: -999;
+    top: 150px;
+    left: 30px;
+    width: 222px;
+    height: 330px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    background: url(../images/dragon-left.png) no-repeat;
+    display: block;
+  }
+}
+/* line 91, ../../../../../../../Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.9/sass/susy/_media.scss */
+.lte-ie9 .dragon-left {
+  position: fixed;
+  z-index: -999;
+  top: 150px;
+  left: 30px;
+  width: 222px;
+  height: 330px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  background: url(../images/dragon-left.png) no-repeat;
+  display: block;
+}
+
+/* line 16, ../sass/partial/_dragon.scss */
+.dragon-right {
+  display: none;
+}
+@media (min-width: 768px) {
+  /* line 16, ../sass/partial/_dragon.scss */
+  .dragon-right {
+    position: fixed;
+    top: 150px;
+    right: 30px;
+    z-index: -999;
+    width: 222px;
+    height: 330px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    background: url(../images/dragon-right.png) no-repeat;
+    display: block;
+  }
+}
+/* line 91, ../../../../../../../Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.9/sass/susy/_media.scss */
+.lte-ie9 .dragon-right {
+  position: fixed;
+  top: 150px;
+  right: 30px;
+  z-index: -999;
+  width: 222px;
+  height: 330px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  background: url(../images/dragon-right.png) no-repeat;
+  display: block;
+}
+
+/* line 3, ../sass/partial/_form.scss */
+textarea.form-control,
+input[type=text].form-control {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+  outline: none;
+}
+/* line 9, ../sass/partial/_form.scss */
+textarea.form-control:hover, textarea.form-control:active, textarea.form-control:focus,
+input[type=text].form-control:hover,
+input[type=text].form-control:active,
+input[type=text].form-control:focus {
+  outline: none;
+  border: 1px solid #a30612;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 17, ../sass/partial/_form.scss */
+textarea.form-control {
+  margin: auto auto;
+  width: 100%;
+  resize: none;
+}
+
+/* line 23, ../sass/partial/_form.scss */
+.form-horizontal .form-group {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* line 1, ../sass/partial/_gototop.scss */
+.gototop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  z-index: 100000;
+  cursor: pointer;
+  background: #a30612;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  line-height: 50px;
+  border-radius: 3px;
+  display: none;
+}
+/* line 17, ../sass/partial/_gototop.scss */
+.gototop .glyphicon {
+  bottom: 0;
+  left: 1px;
+}
+
+/* line 1, ../sass/partial/_navbar.scss */
+.navbar {
+  border-width: 0;
+  background-color: #a30612;
+  border-bottom: 1px solid #7c050e;
+  -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);
+  color: #ffffff;
+  font-family: arial,sans-serif;
+  top: 0;
+  position: fixed;
+  width: inherit;
+}
+/* line 12, ../sass/partial/_navbar.scss */
+.navbar a {
+  cursor: pointer;
+  font-weight: bold;
+}
+/* line 17, ../sass/partial/_navbar.scss */
+.navbar li > a,
+.navbar .navbar-toggle {
+  color: #efefef;
+}
+/* line 20, ../sass/partial/_navbar.scss */
+.navbar li > a.btn {
+  color: #666666;
+}
+/* line 24, ../sass/partial/_navbar.scss */
+.navbar .dropdown-menu li a,
+.navbar .dropdown-menu li a:hover {
+  color: white;
+}
+/* line 27, ../sass/partial/_navbar.scss */
+.navbar .dropdown-menu li > a {
+  padding-left: 30px;
+}
+/* line 30, ../sass/partial/_navbar.scss */
+.navbar .dropdown-menu .divider {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* line 37, ../sass/partial/_navbar.scss */
+.navbar li > a:hover,
+.navbar li > a:focus,
+.navbar .open, .navbar .open > a,
+.navbar .open > a:hover,
+.navbar .open > a:focus {
+  background-color: #72040d;
+  color: #fff;
+}
+/* line 41, ../sass/partial/_navbar.scss */
+.navbar .logo {
+  color: #fffffe;
+  font-size: 20px;
+  font-weight: 700;
+}
+/* line 46, ../sass/partial/_navbar.scss */
+.navbar .navbar-toggle, .navbar .close {
+  outline: 0;
+}
+/* line 49, ../sass/partial/_navbar.scss */
+.navbar .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+/* line 53, ../sass/partial/_navbar.scss */
+.navbar .nav .caret,
+.navbar .nav a:hover .caret {
+  border-top-color: #fffffe;
+  border-bottom-color: #fffffe;
+}
+/* line 59, ../sass/partial/_navbar.scss */
+.navbar .nav .open > a .caret,
+.navbar .nav .open > a:hover .caret,
+.navbar .nav .open > a:focus .caret {
+  border-top-color: #fffffe;
+  border-bottom-color: #fffffe;
+}
+@media (min-width: 768px) {
+  /* line 65, ../sass/partial/_navbar.scss */
+  .navbar .dropdown-menu li a {
+    color: #a30612;
+  }
+  /* line 68, ../sass/partial/_navbar.scss */
+  .navbar .dropdown-menu .divider {
+    background-color: #eee;
+  }
+  /* line 71, ../sass/partial/_navbar.scss */
+  .navbar .navbar-form {
+    width: 40%;
+  }
+}
+/* line 65, ../sass/partial/_navbar.scss */
+.lte-ie9 .navbar .dropdown-menu li a {
+  color: #a30612;
+}
+/* line 68, ../sass/partial/_navbar.scss */
+.lte-ie9 .navbar .dropdown-menu .divider {
+  background-color: #eee;
+}
+/* line 71, ../sass/partial/_navbar.scss */
+.lte-ie9 .navbar .navbar-form {
+  width: 40%;
+}
+@media (min-width: 1200px) {
+  /* line 76, ../sass/partial/_navbar.scss */
+  .navbar .navbar-form {
+    width: 30%;
+  }
+}
+/* line 76, ../sass/partial/_navbar.scss */
+.lte-ie9 .navbar .navbar-form {
+  width: 30%;
+}
+
+/* line 1, ../sass/partial/_preview.scss */
+.preview {
+  position: relative;
+  margin-bottom: 20px;
+}
+/* line 4, ../sass/partial/_preview.scss */
+.preview .preview-img {
+  display: block;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+/* line 10, ../sass/partial/_preview.scss */
+.preview .preview-img div {
+  height: 40vh;
+  margin-top: 20px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* line 16, ../sass/partial/_preview.scss */
+.preview .preview-img div img {
+  max-height: 90%;
+  max-width: 90%;
+  margin: auto;
+}
+/* line 23, ../sass/partial/_preview.scss */
+.preview .loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: -60px;
+  z-index: 1;
+  display: none;
+}
+@media (min-width: 992px) {
+  /* line 1, ../sass/partial/_preview.scss */
+  .preview {
+    margin-bottom: 0;
+  }
+  /* line 36, ../sass/partial/_preview.scss */
+  .preview .preview-img div {
+    height: 90vh;
+    background-size: initial;
+  }
+}
+/* line 91, ../../../../../../../Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.9/sass/susy/_media.scss */
+.lte-ie9 .preview {
+  margin-bottom: 0;
+}
+/* line 36, ../sass/partial/_preview.scss */
+.lte-ie9 .preview .preview-img div {
+  height: 90vh;
+  background-size: initial;
+}
+
+/* line 44, ../sass/partial/_preview.scss */
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+/* line 54, ../sass/partial/_preview.scss */
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #FDD300;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: bounce 2.0s infinite ease-in-out;
+  animation: bounce 2.0s infinite ease-in-out;
+}
+
+/* line 68, ../sass/partial/_preview.scss */
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes bounce {
+  /* line 74, ../sass/partial/_preview.scss */
+  0%, 100% {
+    -webkit-transform: scale(0);
+  }
+
+  /* line 75, ../sass/partial/_preview.scss */
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  /* line 79, ../sass/partial/_preview.scss */
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+
+  /* line 82, ../sass/partial/_preview.scss */
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+/* line 1, ../sass/partial/_showroom.scss */
+.ajax-loading {
+  display: none;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+/* line 7, ../sass/partial/_showroom.scss */
+.load-more {
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* line 11, ../sass/partial/_showroom.scss */
+#showroom-list {
+  padding-top: 20px;
+  background: none;
+}
+/* line 14, ../sass/partial/_showroom.scss */
+#showroom-list .thumbnail {
+  padding: 0;
+  margin-bottom: 5px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  border: none;
+  background: none;
+}
+/* line 20, ../sass/partial/_showroom.scss */
+#showroom-list .thumbnail div {
+  width: 100%;
+  padding-bottom: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-bottom: 5px;
+}
+/* line 31, ../sass/partial/_showroom.scss */
+#showroom-list .like {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* line 39, ../sass/partial/_showroom.scss */
+#showroom-detail {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* line 43, ../sass/partial/_showroom.scss */
+#showroom-detail .row,
+#showroom-detail .col-sm-12 {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+/* line 48, ../sass/partial/_showroom.scss */
+#showroom-detail .col-md-4 {
+  margin-bottom: 20px;
+}
+/* line 51, ../sass/partial/_showroom.scss */
+#showroom-detail .well {
+  display: inline-block;
+  margin: auto;
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  max-width: 330px;
+}
+/* line 59, ../sass/partial/_showroom.scss */
+#showroom-detail .like {
+  margin-top: 20px;
+}
+/* line 62, ../sass/partial/_showroom.scss */
+#showroom-detail .share-link {
+  margin-bottom: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  /* line 68, ../sass/partial/_showroom.scss */
+  #showroom-detail .col-md-4 {
+    margin-bottom: 0;
+  }
+}
+/* line 68, ../sass/partial/_showroom.scss */
+.lte-ie9 #showroom-detail .col-md-4 {
+  margin-bottom: 0;
+}
+
+/* line 74, ../sass/partial/_showroom.scss */
+.likebtn,
+.unlikebtn {
+  cursor: pointer;
+}
+
+/* line 1, ../sass/partial/_visible.scss */
+.mobile-hide {
+  display: none;
+}
+@media (min-width: 768px) {
+  /* line 1, ../sass/partial/_visible.scss */
+  .mobile-hide {
+    display: initial;
+  }
+}
+/* line 91, ../../../../../../../Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.9/sass/susy/_media.scss */
+.lte-ie9 .mobile-hide {
+  display: initial;
+}
+
+/* line 7, ../sass/partial/_visible.scss */
+.desktop-hide {
+  display: initial;
+}
+@media (min-width: 1200px) {
+  /* line 7, ../sass/partial/_visible.scss */
+  .desktop-hide {
+    display: none;
+  }
+}
+/* line 91, ../../../../../../../Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.9/sass/susy/_media.scss */
+.lte-ie9 .desktop-hide {
+  display: none;
+}
+
+/* line 13, ../sass/partial/_visible.scss */
+.process {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+  opacity: 0.2;
+}

@@ -1,0 +1,49 @@
+<?php
+
+class appModel extends model
+{
+  // //create
+  // function insertData($parameter,..)
+  // {
+  //   $sql = "INSERT INTO `table` (`column`, ..) VALUES ( '$parameter', ..)";
+  //   $this->fetch($sql);
+  // }
+
+  // //read
+  // function readData($parameter)
+  // {
+  //   $sql = "SELECT * FROM `table` WHERE `column` = '$parameter'";
+  //   $this->fetch($sql);
+  //   return $this->packageData();
+  // }
+
+  // //update
+  // function updateData($selector, $parameter, ..)
+  // {
+  //   $sql = "UPDATE `table` SET `column` = '$parameter', .. WHERE `selector` = '$selector'";
+  //   $this->fetch($sql);
+  // }
+
+  // //delete
+  // function deleteData($parameter)
+  // {
+  //   $sql = "DELETE FROM `table` WHERE `column` = '$parameter'";
+  //   $this->fetch($sql);
+  // }
+
+  // //search
+  // function searchData($column,$keyword)
+  // {
+  //   $sql = "SELECT * FROM `table` WHERE `$column` LIKE '%$keyword%'";
+  //   $this->fetch($sql);
+  //   return $this->packageData();
+  // }
+
+  // //count
+  // function dataCount($parameter)
+  // {
+  //   $sql = "SELECT count(*) as total FROM `table` WHERE `column` = '$parameter'";
+  //   $data = mysql_fetch_assoc(mysql_query($sql));
+  //   return @$data['total'];
+  // }
+}

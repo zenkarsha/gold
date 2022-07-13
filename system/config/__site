@@ -1,0 +1,14 @@
+<?php
+
+$config['site'] = [
+
+  'path' => 'http://'.$_SERVER['HTTP_HOST'].str_replace('index.php','',$_SERVER['PHP_SELF']),
+  'url' => 'https://'.$config['init']['domain'].'.unlink.men/',
+  'default' => 'detail',
+  'name'  => '御賜金牌產生器',
+  'title' => '御賜金牌產生器',
+  'description' => '',
+  'copyright' => 'just for fun',
+  'shortcut-icon' => 'http://'.$config['init']['domain'].'.unlink.men/images/favicon.png'
+
+];

@@ -1,0 +1,11 @@
+<?php
+
+$config['app'] = [
+
+  'default-text'  => '御賜淫蕩',
+  'filename'      => '御賜金牌',
+  'button-color'  => 'primary',
+  'button-name'   => '下載圖片',
+  'button-icon'   => 'fa fa-download'
+
+];

@@ -1,0 +1,23 @@
+---
+$path
+$total
+$list
+$sort
+$itemname
+---
+
+.row
+  .col-sm-12
+    h4.text-center 目前有 {{$total}} 面{{$itemname}} &nbsp;&nbsp;
+      br.desktop-hide
+      a href="{{$path}}showroom?sort=hot" 熱門排序
+      | &nbsp;&nbsp;&nbsp;
+      a href="{{$path}}showroom" 時間排序
+      | &nbsp;&nbsp;&nbsp;
+      a href="{{$path}}showroom?sort=good" 萬歲排序
+    #showroom-list.row {{$list}}
+    .load-more
+      a.btn.btn-default.btn-lg 載入更多{{$itemname}}
+    .ajax-loading 載入中
+    input#loadingpage type="hidden" value="0"
+    input#sort type="hidden" value="{{$sort}}"

@@ -1,0 +1,14 @@
+<?php
+
+$config['showroom'] = [
+
+  'imgfolder'     => 'i',
+  'navbar-title'  => '金牌一覽',
+  'icon'          => 'fa fa-database',
+  'itemname'      => '金牌',
+  'button-color'  => 'default',
+  'button-name'   => '投稿',
+  'button-icon'   => 'fa fa-paper-plane-o',
+  'perpage'       => 12
+
+];
